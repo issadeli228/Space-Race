@@ -211,24 +211,24 @@ namespace Space_Race
             //check to see if a new ball should be created 
             randValue = randGen.Next(0, 50);
 
-            if (randValue >= 45) 
+            if (randValue >= 45)
             {
                 ballXList.Add(0);
                 ballYList.Add(randGen.Next(0, 300));
                 ballSpeedList.Add(randGen.Next(2, 10));
                 ballColourList.Add("white");
             }
-            
 
-            
+
+
             // move balls 
             for (int i = 0; i < ballYList.Count(); i++)
             {
                 ballXList[i] += ballSpeedList[i];
             }
-            
 
-            
+
+
             //check if ball is below play area and remove it if it is 
             for (int i = 0; i < ballXList.Count(); i++)
             {
